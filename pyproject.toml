@@ -8,10 +8,17 @@ description = "An edge-maxxing model submission for the 4090 newdream contest"
 requires-python = ">=3.10,<3.11"
 version = "1.0.0"
 dependencies = [
+    "xformers==0.0.25.post1",
+    "triton==2.2.0",
+    "torchvision==0.17.2",
     "diffusers==0.30.2",
+    "tgate==0.1.2",
     "transformers==4.41.2",
     "accelerate==0.31.0",
     "omegaconf==2.3.0",
+    "torch==2.2.2",
+    "numpy<2",
+    "stable-fast @ https://github.com/chengzeyi/stable-fast/releases/download/v1.0.5/stable_fast-1.0.5+torch222cu121-cp310-cp310-manylinux2014_x86_64.whl",
     "edge-maxxing-pipelines @ git+https://github.com/womboai/edge-maxxing#subdirectory=pipelines",
 ]
 
