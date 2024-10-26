@@ -6,20 +6,24 @@ build-backend = "setuptools.build_meta"
 name = "edge-maxxing-4090-newdream"
 description = "An edge-maxxing model submission for the 4090 newdream contest"
 requires-python = ">=3.10,<3.11"
-version = "1.0.0"
+version = "6"
 dependencies = [
+    "torchvision==0.17.2",
+    "diffusers==0.28.2",
+    "onediff==1.2.0",
+    "onediffx==1.2.0",
     "xformers==0.0.25.post1",
     "triton==2.2.0",
-    "torchvision==0.17.2",
-    "diffusers==0.30.2",
     "tgate==0.1.2",
     "transformers==4.41.2",
     "accelerate==0.31.0",
     "omegaconf==2.3.0",
     "torch==2.2.2",
     "numpy<2",
+    "huggingface_hub==0.24.7",
+    "oneflow @ https://github.com/siliconflow/oneflow_releases/releases/download/community_cu118/oneflow-0.9.1.dev20240724+cu118-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
     "stable-fast @ https://github.com/chengzeyi/stable-fast/releases/download/v1.0.5/stable_fast-1.0.5+torch222cu121-cp310-cp310-manylinux2014_x86_64.whl",
-    "edge-maxxing-pipelines @ git+https://github.com/womboai/edge-maxxing#subdirectory=pipelines",
+    "edge-maxxing-pipelines @ git+https://github.com/womboai/edge-maxxing@8d8ff45863416484b5b4bc547782591bbdfc696a#subdirectory=pipelines",
 ]
 
 [project.scripts]
